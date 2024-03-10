@@ -9,26 +9,57 @@
     <link rel="stylesheet" href="~/MercadoArtesano.UI.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <!--------------------------------------------------------------Zona de Header------------------------------------------------------------------->
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MercadoArtesano.UI</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid ">
+                <a class="navbar-brand ms-3" href="index.html"><img width="70px" src="img/ceramica.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-5">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <li><a class="dropdown-item" href="#">Electrónica</a></li>
+                                <li><a class="dropdown-item" href="#">Ropa</a></li>
+                                <li><a class="dropdown-item" href="#">Hogar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">Nosotros</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <li><a class="dropdown-item" href="#">Historia</a></li>
+                                <li><a class="dropdown-item" href="#">Contacto</a></li>
+                                <li><a class="dropdown-item" href="#">Sony</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-auto">
+                        <input class="form-control me-2" type="search" placeholder="Buscar productos..."
+                               aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="#"><img width="30px" src="img/carrito-de-compras.png" alt=""></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" href="#">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link" href="#">Registrarse</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!--------------------------------------------------------------Final zona de Header------------------------------------------------------------------->
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -36,14 +67,51 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!--------------------------------------------------------------Zona de footer------------------------------------------------------------------->
+    <footer class="bg-dark text-light py-5">
         <div class="container">
-            &copy; 2024 - MercadoArtesano.UI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Acerca de nosotros</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Productos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Nuevos productos</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Mi cuenta</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Iniciar sesión</a></li>
+                        <li><a href="#">Crear cuenta</a></li>
+                        <li><a href="#">Mi carrito</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li>Dirección: El Salvador, Sonsonate</li>
+                        <li>Teléfono: +503 7809-4111</li>
+                        <li>Email: osmanylopez.al@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
+    <!--------------------------------------------------------------Final zona de footer------------------------------------------------------------------->
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
