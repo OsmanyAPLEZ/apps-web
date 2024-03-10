@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityLayer", "EntityLayer", "{B7A48FE9-D945-49D5-8B2A-F415B964FF96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{B4F4D639-F238-4775-BFE2-0E5E19F45A0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccessLogic", "DataAccessLogic", "{6CF49CC3-2616-47DB-BE04-48DFA595B3D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{94CAF0E8-BE91-43ED-B139-53973E5D2BF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercadoArtesano.BL", "MercadoArtesano.BL\MercadoArtesano.BL.csproj", "{48DB64D0-EE0A-44DE-8683-CFCD6C7B58FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercadoArtesano.DAL", "MercadoArtesano.DAL\MercadoArtesano.DAL.csproj", "{C00DD1FB-9DB1-4F3F-873D-EAF0EE94C0AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercadoArtesano.EN", "MercadoArtesano.EN\MercadoArtesano.EN.csproj", "{F483C62F-9CF5-43A6-87C7-7E5A0D2FA87A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercadoArtesano.UI", "MercadoArtesano.UI\MercadoArtesano.UI.csproj", "{5DB9D219-2764-4970-884B-5CE70202B0E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48DB64D0-EE0A-44DE-8683-CFCD6C7B58FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DB64D0-EE0A-44DE-8683-CFCD6C7B58FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48DB64D0-EE0A-44DE-8683-CFCD6C7B58FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48DB64D0-EE0A-44DE-8683-CFCD6C7B58FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C00DD1FB-9DB1-4F3F-873D-EAF0EE94C0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C00DD1FB-9DB1-4F3F-873D-EAF0EE94C0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C00DD1FB-9DB1-4F3F-873D-EAF0EE94C0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C00DD1FB-9DB1-4F3F-873D-EAF0EE94C0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F483C62F-9CF5-43A6-87C7-7E5A0D2FA87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F483C62F-9CF5-43A6-87C7-7E5A0D2FA87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F483C62F-9CF5-43A6-87C7-7E5A0D2FA87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F483C62F-9CF5-43A6-87C7-7E5A0D2FA87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB9D219-2764-4970-884B-5CE70202B0E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB9D219-2764-4970-884B-5CE70202B0E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB9D219-2764-4970-884B-5CE70202B0E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB9D219-2764-4970-884B-5CE70202B0E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{48DB64D0-EE0A-44DE-8683-CFCD6C7B58FA} = {B4F4D639-F238-4775-BFE2-0E5E19F45A0E}
+		{C00DD1FB-9DB1-4F3F-873D-EAF0EE94C0AD} = {6CF49CC3-2616-47DB-BE04-48DFA595B3D0}
+		{F483C62F-9CF5-43A6-87C7-7E5A0D2FA87A} = {B7A48FE9-D945-49D5-8B2A-F415B964FF96}
+		{5DB9D219-2764-4970-884B-5CE70202B0E9} = {94CAF0E8-BE91-43ED-B139-53973E5D2BF2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD0B3FE5-8C1D-429B-8802-22D9F765E672}
+	EndGlobalSection
+EndGlobal
