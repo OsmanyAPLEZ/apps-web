@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MercadoArtesano.EN;
+using Microsoft.EntityFrameworkCore;
 
 namespace MercadoArtesano.DAL
 {
