@@ -1,1 +1,10 @@
-﻿
+﻿CREATE DATABASE MercadoArtesanoDB;
+GO
+USE MercadoArtesanoDB;
+GO
+
+CREATE TABLE [Roles](
+Id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+[Name] VARCHAR(20) NOT NULL,
+);
+GO
