@@ -11,4 +11,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MercadoArtesano.EN\MercadoArtesano.EN.csproj" />
+  </ItemGroup>
+
 </Project>
