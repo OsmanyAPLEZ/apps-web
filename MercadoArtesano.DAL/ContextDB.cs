@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace MercadoArtesano.DAL
 {
-    public class ContextDB
+    public class ContextDB : DbContext
     {
         #region REFERENCIAS DE LAS TABLAS DE LA BD
 
         public DbSet<Role> Roles { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
+
+        public DbSet<City> Cities { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
 
         public DbSet<Customer> Customers { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
 
