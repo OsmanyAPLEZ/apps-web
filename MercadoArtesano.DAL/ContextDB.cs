@@ -23,7 +23,8 @@ namespace MercadoArtesano.DAL
         // Metodo de Conexion a la Base de Datos
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@""); //Poner str de concexion local
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-32IICB7\SQLEXPRESS;Initial Catalog=MercadoArtesanoDB;
+                                        Integrated Security=True; Encrypt = False; Trust Server Certificate=True"); //Poner str de concexion local
         }
     }
 }
