@@ -1,0 +1,139 @@
+﻿@model IEnumerable<MercadoArtesano.EN.City>
+
+@{
+    ViewData["Title"] = "Departamentos";
+    int numPage = 1; // Paginacion
+    int numRegistros = 0; // reset de la paginacion
+    int numRegistrosPorPage = 10; //Dato a mostrar en la paginacion
+    int[] tops = { 10, 20, 50, -1 }; // para que el user eliga cuantos registros quiere mostrar
+    int topActual = Convert.ToInt32(ViewBag.Top); //controla cuanto registros ha seleccionado el  usuario
+}
+
+<h1>Mantenimiento Para Departamentos</h1>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Index">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Nombre</label>
+                        <input type="text" class="form-control" name="Name" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label class="control-label">Top</label>
+                        <select name="Top_Aux" class="form-control">
+                            @foreach (var item in tops)
+                            {
+                                string strItem = item != -1 ? item.ToString() : "Todos";
+                                if (item != topActual)
+                                {
+                                    <option value="@item">@strItem</option>
+                                }
+                                else
+                                {
+                                    <option selected value="@item">@strItem</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="col-md-4 m-2">
+                <input type="submit" value="Buscar Departamentos" class="btn btn-outline-info" /> &nbsp;&nbsp;
+                <a asp-action="Create" class="btn btn-outline-primary">Nuevo Departamentos</a>
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<h2>Tabla de Resultados</h2>
+<table class="table table-responsive table-striped paginationjs">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr data-page="@numPage">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Edit", new { id = item.Id }, new { @class = "btn btn-outline-info" }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.Id }, new { @class = "btn btn-outline-secondary" }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-outline-danger" })
+                </td>
+            </tr>
+            numRegistros++;
+            if (numRegistros == numRegistrosPorPage)
+            {
+                numPage++;
+                numRegistros = 0;
+            }
+        }
+        @{
+            if (numRegistros == 0)
+            {
+                numPage--;
+            }
+        }
+    </tbody>
+</table>
+@if (numPage > 1)
+{
+    <div class="row" style="overflow:auto">
+        <div class="col-md-12">
+            <ul class="pagination paginationjs" data-numpage="@numPage" data-pageactive="1">
+                <li class="page-item" data-typepage="Previous"><a class="page-link" href="#">Anterior</a></li>
+                @for (var i = 1; i <= numPage; i++)
+                {
+                    <li class="page-item" data-page="@i" data-typepage="Item"><a class="page-link" href="#">@i</a></li>
+                }
+                <li class="page-item" data-typepage="Next"><a class="page-link" href="#">Siguiente</a></li>
+            </ul>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--Referencia hacia la libreria de las alertas-->
+
+    <script>
+        // Verificar si hay un mensaje de éxito en TempData
+        const successMessageCreate = '@TempData["SuccessMessageCreate"]';
+        if (successMessageCreate) {
+            Swal.fire(
+                '¡Guardado Exitosamente!',
+                successMessageCreate,
+                'success'
+            );
+        }
+
+        const successMessageUpdate = '@TempData["SuccessMessageUpdate"]';
+        if (successMessageUpdate) {
+            Swal.fire(
+                '¡Modificado Exitosamente!',
+                successMessageUpdate,
+                'success'
+            );
+        }
+
+        const successMessageDelete = '@TempData["SuccessMessageDelete"]';
+        if (successMessageDelete) {
+            Swal.fire(
+                '¡Eliminado Exitosamente!',
+                successMessageDelete,
+                'success'
+            );
+        }
+    </script>
+}

@@ -1,0 +1,58 @@
+﻿@model MercadoArtesano.EN.City
+
+@{
+    ViewData["Title"] = "Eliminar Departamento";
+}
+<br />
+<br />
+<br />
+<h2>Eliminar Departamento</h2>
+<br />
+<div class="alert alert-danger" role="alert">
+    Estas Seguro De Eliminar el Siguiente Registro? Recuerda No Puedes Revertir Los Cambios
+</div>
+<div>
+
+    <hr />
+    <dl class="row">
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+
+    <form id="Form" asp-action="Delete" onsubmit="CreateRecord(event)">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar Registro" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-success">Regresar</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--Referencia hacia la libreria de las alertas-->
+
+    <script>
+        function CreateRecord(e) {
+            e.preventDefault();
+
+            const form = document.getElementById('Form');
+            const nameInput = document.getElementById('Name');
+
+            Swal.fire({
+                title: '¿Eliminar Este Registro?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Si, Eliminar Registro',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        }
+    </script>
+}
