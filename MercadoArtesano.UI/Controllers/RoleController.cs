@@ -9,7 +9,7 @@ namespace MercadoArtesano.UI.Controllers
     {
         RoleBL roleBL = new RoleBL();
         // GET: RoleController
-        public async Task<IActionResult> Index(Role role = null)
+        public async Task<IActionResult> Index(Role role)
         {
             if (role == null)
                 role = new Role();
