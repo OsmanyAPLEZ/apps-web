@@ -14,9 +14,18 @@ namespace MercadoArtesano.DAL
 
         public DbSet<Role> Roles { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
 
-        public DbSet<City> Cities { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
+        public DbSet<Administrator> Administrators { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
 
         public DbSet<Customer> Customers { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
+
+        public DbSet<Store> Stores { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
+
+
+        public DbSet<City> Cities { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
+
+        public DbSet<Category> Categories { get; set; } //Coleccion que hace referencia a la tabla de la base de datos
+
+
 
         #endregion
 
