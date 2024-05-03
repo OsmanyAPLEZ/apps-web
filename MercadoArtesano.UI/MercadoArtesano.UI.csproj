@@ -20,4 +20,8 @@
     <ProjectReference Include="..\MercadoArtesano.EN\MercadoArtesano.EN.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\images\logos\" />
+  </ItemGroup>
+
 </Project>
