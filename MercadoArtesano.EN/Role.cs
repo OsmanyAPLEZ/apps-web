@@ -25,5 +25,8 @@ namespace MercadoArtesano.EN
         // Propiedades no mapeables
         [NotMapped]
         public int Top_Aux { get; set; } //Propiedad auxiliar
+
+        public List<Customer>? Customers { get; set; } // propiedad de navegación  Esta propiedad Customers representa la relación uno a muchos y permite el acceso
+
     }
 }
